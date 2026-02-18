@@ -1,0 +1,27 @@
+body {
+  background-color: black;
+  color : white ;
+  font-family: 'Courier New', Courier, monospace;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  background-color:white ;
+  color:black ;
+  border: 2px solid white;
+  height:40px;
+  width:80px;
+  padding:10px;
+  border-radius: 5px;
+  margin:10px;
+  font-size: medium;
+  cursor : pointer;
+}
+
+/* .card{
+  background-color:aqua;
+  color :black;
+  border: 5px solid black;
+  border-radius: 20px;
+} */
