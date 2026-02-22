@@ -1,17 +1,23 @@
 import styles from "./Course.module.css"
-
+import HTML from "./HTML.png"
 const Course1 ="HTML";
 
-function Course() {
+
+function Course(props) {
     return (
-        <center>
-        <div className ={styles.card} >
-            <img src="" alt="Course Image" />
-            <h3>{Course1}</h3>
-            <p>This is code io HTML Course</p>
+        
+        <div className ={styles.cards} >
+            <img src={props.image} alt={props.altName} />
+            <h3>{props.name}</h3>
+            <p>{props.description}</p>
+                <p> Fee :{props.price} </p>
         </div>
-        </center>
+
     );
 }
+
+// Course.defaultProps ={
+//     image : HC
+// }
 
 export default Course;
