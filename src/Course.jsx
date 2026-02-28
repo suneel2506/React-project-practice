@@ -1,21 +1,24 @@
-// // import HTML from "./assets/HTML.png"
-// // const Course1 ="HTML";
-// // import PropTypes from 'prop-types'
+import HTML from "./assets/HTML.png"
+const Course1 ="HTML";
+import PropTypes from 'prop-types'
 
 
-// function Course(props) {
+function Course(props) {
 
-//     // if (props.show){
-//         return (
+    // if (props.show){
         
-//         <div className ="cards">
-//             <img src={props.image} alt={props.altName} />
-//             <h3>{props.name}</h3>
-//             <p>{props.description}</p>
-//                 <p> Fee :{props.price} </p>
-//         </div>
+ return (
+        
+            // props.name &&
+             <div className ="cards">
+            <img src={props.image} alt={props.altName} />
+            <h3>{props.name}</h3>
+            <p>{props.description}</p>
+                <p>{props.price} </p>
+               
+        </div>
 
-//     );
+    );
 //     // }
 //     // else {
 //     //     return (    
@@ -35,6 +38,6 @@
 // // description : PropTypes.string,
 // // image : PropTypes.string,
 // // price : PropTypes.number
-// // }
+}
 
-// export default Course;
+export default Course;
