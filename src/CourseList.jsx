@@ -42,7 +42,9 @@ function CourseList() {
          }
 
     ]
-     courses.sort((x,y) => y.price -x.price)
+    //  courses.sort((x,y) => y.price - x.price)
+
+    //  const vfmCourses = courses.filter((course) => course.price<250)
 
     const coursesList = courses.map((course,index)=>
     <Course 
@@ -61,4 +63,4 @@ function CourseList() {
     );
 }
 
-export default CourseList
+export default CourseList;
