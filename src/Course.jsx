@@ -1,8 +1,7 @@
-import HTML from "./assets/HTML.png";
 const Course1 = "HTML";
-import PropTypes from "prop-types";
+// import PropTypes from "prop-types";
 import CourseList from "./Courselist";
-import { useState } from "react";
+import { useState ,useEffect} from "react";
 
 function Course(props) {
   // if (props.show){
@@ -15,6 +14,8 @@ function Course(props) {
     // setDiscount(props.price  - amt);
   }
 
+
+
   return (
     // props.name &&
     <div className="cards">
@@ -25,6 +26,7 @@ function Course(props) {
       <button onClick={() => {Enroll(20);}}>Discount</button>
       <button onClick= { () =>props.delete(props.id)}> Delete</button>
       <p>{purchased}</p>
+     
     </div>
   );
 
