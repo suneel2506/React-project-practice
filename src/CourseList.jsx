@@ -2,59 +2,69 @@ import Course from "./Course";
 import HTML from "./assets/HTML.png";
 import CSS from "./assets/CSS.png";
 import JS from "./assets/JS.png";
+import { useState } from "react";
 
 function CourseList() {
-  const courses = [
+  const [courses,setCourses] =useState([
     {
-      key: 1,
+      id: 1,
       name: "HTML",
       description: "This is code io HTML Course",
       image: HTML,
       price: 100,
     },
     {
-      key: 2,
+      id: 2,
       name: "CSS",
       description: "This is code io CSS Course",
       image: CSS,
       price: 150,
     },
     {
-      key: 3,
+      id: 3,
       name: "JavaScript",
       description: "This is code io JavaScript Course",
       image: JS,
       price: 200,
     },
     {
-      key: 4,
+      id: 4,
       name: "React ",
       description: "This is code io React Course",
       image: HTML,
       price: 250,
     },
     {
-      key: 5,
+      id: 5,
       name: "NodeJS",
       description: "This is code io Node JS Course",
       image: JS,
       price: 300,
     },
-  ];
+  ]);
   //  courses.sort((x,y) => y.price - x.price)
-
   //  const vfmCourses = courses.filter((course) => course.price<250)
 
-  const coursesList = courses.map((course, index) => (
+  function handleDelete(id){
+    const newCourses = courses.filter((course) => course.id != id);
+    setCourses(newCourses); 
+  }
+  
+  const coursesList = courses.map((course) => (
     <Course
-      key={index}
+      key={course.id}
       name={course.name}
       description={course.description}
       image={course.image}
       price={course.price}
+      delete ={handleDelete}
+      id ={course.id}
+ 
     />
   ));
-  return <>{coursesList}</>;
-}
+  return <>{coursesList}
+         
+  </>;
 
+}
 export default CourseList;
